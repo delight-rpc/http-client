@@ -6,7 +6,7 @@ import { terser } from 'rollup-plugin-terser'
 import analyze from 'rollup-plugin-analyzer'
 import replace from '@rollup/plugin-replace'
 
-const UMD_NAME = 'MQ'
+const UMD_NAME = 'DelightRpcHttpClient'
 
 export default [
   ...createOptions({
