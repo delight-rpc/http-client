@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "target": "ES2019"
+  , "module": "CommonJS"
+  , "strict": true
+  , "noUnusedLocals": true
+  , "noUnusedParameters": false
+  , "experimentalDecorators": true
+  , "emitDecoratorMetadata": false
+  , "baseUrl": "."
+  , "paths": {
+      "@src/*": ["src/*"]
+    , "@error": ["src/shared/error"]
+    , "@functions/*": ["src/functions/*"]
+    , "@classes/*": ["src/classes/*"]
+    , "@test/*": ["__tests__/*"]
+    }
+  }
+}
