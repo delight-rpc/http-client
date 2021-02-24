@@ -12,7 +12,8 @@ yarn add @delight-rpc/http-client
 
 ```ts
 interface IClientOptions {
-  server: string
+  host: string
+  port: number
 }
 ```
 
