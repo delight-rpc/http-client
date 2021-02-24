@@ -5,7 +5,7 @@ import { ok, toJSON } from 'extra-response'
 import { json, url } from 'extra-request/lib/es2015/transformers'
 import { JsonRpcResponse, Json  } from '@blackglory/types'
 
-interface IClientOptions {
+export interface IClientOptions {
   server: string
 }
 
