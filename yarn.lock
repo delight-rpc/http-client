@@ -328,6 +328,15 @@
     ajv "^7.1.1"
     extra-dom "^0.2.9"
 
+"@blackglory/types@^0.2.17":
+  version "0.2.17"
+  resolved "https://registry.yarnpkg.com/@blackglory/types/-/types-0.2.17.tgz#3da7be09bbfd71f467a1010923f4265ab423ab58"
+  integrity sha512-/3yVNMhnqnX9Ru3MbbACQM0afXNqMdcrIvvfnLNX+TKsRZQI3K6Rbb52uJW/YciUCQGAP/f2xxCf4kfUna9/aw==
+  dependencies:
+    "@types/node" "^14.14.31"
+    ajv "^7.1.1"
+    extra-dom "^0.2.9"
+
 "@cnakazawa/watch@^1.0.3":
   version "1.0.4"
   resolved "https://registry.yarnpkg.com/@cnakazawa/watch/-/watch-1.0.4.tgz#f864ae85004d0fcab6f50be9141c4da368d1656a"
@@ -2069,13 +2078,13 @@ delayed-stream@~1.0.0:
   resolved "https://registry.yarnpkg.com/delayed-stream/-/delayed-stream-1.0.0.tgz#df3ae199acadfb7d440aaae0b29e2272b24ec619"
   integrity sha1-3zrhmayt+31ECqrgsp4icrJOxhk=
 
-delight-rpc@^0.1.11:
-  version "0.1.11"
-  resolved "https://registry.yarnpkg.com/delight-rpc/-/delight-rpc-0.1.11.tgz#e809e587c5fb482cd58cf36c4ed4f228fde788f9"
-  integrity sha512-+lBvMQ+8VWOwQ2JSnazclrzKkvPhHuIduX3vLudZCv4Gzuh2ndmpc3l/EsNAzdeCi6i1Qe7nZZhE9ZECh8djDA==
+delight-rpc@^0.1.12:
+  version "0.1.12"
+  resolved "https://registry.yarnpkg.com/delight-rpc/-/delight-rpc-0.1.12.tgz#ea0d21958cd7edd13e92b84ed9babb1037440982"
+  integrity sha512-o1AoWmixiZOpTnH5lxYqWFyMBWTMdd6MMdJlgR/nBgng6yPj1nH9HRCuYzoTt/rTbUTli8t3tlbXWlaLoKzWLw==
   dependencies:
     "@blackglory/errors" "^1.1.2"
-    "@blackglory/types" "^0.2.16"
+    "@blackglory/types" "^0.2.17"
     json-rpc-proxy "^0.6.8"
     nanoid "^3.1.20"
 
