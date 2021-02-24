@@ -10,9 +10,6 @@
   , "baseUrl": "."
   , "paths": {
       "@src/*": ["src/*"]
-    , "@error": ["src/shared/error"]
-    , "@functions/*": ["src/functions/*"]
-    , "@classes/*": ["src/classes/*"]
     , "@test/*": ["__tests__/*"]
     }
   }
