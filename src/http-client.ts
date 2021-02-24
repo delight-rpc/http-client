@@ -9,7 +9,7 @@ interface IClientOptions {
   server: string
 }
 
-export function createClient<IAPI extends object>(options: IClientOptions) {
+export function createClient<IAPI extends object>(options: IClientOptions): DelightRPC.RequestProxy<IAPI> {
   const client = DelightRPC.createClient<IAPI>(async jsonRpc => {
     const req = post(
       url(options.server)
