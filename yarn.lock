@@ -319,6 +319,13 @@
     fs-extra "^9.0.1"
     jest-diff "^26.6.2"
 
+"@blackglory/structures@^0.1.13":
+  version "0.1.13"
+  resolved "https://registry.yarnpkg.com/@blackglory/structures/-/structures-0.1.13.tgz#2d4a26fb65cb0b355e0aa4109c87c6ea79a1f227"
+  integrity sha512-gss9YgvNlQaroIweswvJAFtSj/nbtJdGZ5Noi3DPkf+M+Jej14UakQulGM4R8aBPG3/epG2SfTVQbnfuy+8ElQ==
+  dependencies:
+    "@blackglory/errors" "^1.1.2"
+
 "@blackglory/types@^0.2.13", "@blackglory/types@^0.2.16", "@blackglory/types@^0.2.9":
   version "0.2.16"
   resolved "https://registry.yarnpkg.com/@blackglory/types/-/types-0.2.16.tgz#6d7290bd983951d2acec4ee0be6d0cf23d93cfdf"
@@ -2424,6 +2431,11 @@ event-target-shim@^5.0.0:
   resolved "https://registry.yarnpkg.com/event-target-shim/-/event-target-shim-5.0.1.tgz#5d4d3ebdf9583d63a5333ce2deb7480ab2b05789"
   integrity sha512-i/2XbnSz/uxRCU6+NdVJgKWDTM427+MqYbkQzD321DuCQJUqOuJKIA0IM2+W2xtYHdKOmZ4dR6fExsd4SXL+WQ==
 
+eventemitter3@^4.0.7:
+  version "4.0.7"
+  resolved "https://registry.yarnpkg.com/eventemitter3/-/eventemitter3-4.0.7.tgz#2de9b68f6528d5644ef5c59526a1b4a07306169f"
+  integrity sha512-8guHBZCwKnFhYdHr2ysuRWErTwhoN2X8XELRlrRwpmfeY2jjuUN4taQMsULKUVo1K4DvZl+0pgfyoysHxvmvEw==
+
 "eventsource@https://github.com/EventSource/eventsource#46fe04e03e54f4129a28bf75b3a1e5f4ab68b52a":
   version "1.0.7"
   resolved "https://github.com/EventSource/eventsource#46fe04e03e54f4129a28bf75b3a1e5f4ab68b52a"
@@ -2575,6 +2587,20 @@ extra-fetch@^1.0.0:
     fetch-blob "^2.1.1"
     formdata-node "^2.4.0"
     node-fetch "3.0.0-beta.9"
+
+extra-promise@^0.14.5:
+  version "0.14.5"
+  resolved "https://registry.yarnpkg.com/extra-promise/-/extra-promise-0.14.5.tgz#6c98a98df718e1d15e2235bf2f46326790fcdf39"
+  integrity sha512-N6whMaYMiYP7EUl1mG2Ki/kIwOmYIDDoFWLz9euIJgnmzfJDotKK2S7aphQ8l3EdHH7cJi2h/inQDuNB/b3Iig==
+  dependencies:
+    "@blackglory/errors" "^1.1.2"
+    "@blackglory/structures" "^0.1.13"
+    "@blackglory/types" "^0.2.23"
+    abort-controller "^3.0.0"
+    eventemitter3 "^4.0.7"
+    iterable-operator "^0.13.3"
+    reflect-metadata "^0.1.13"
+    return-style "^0.12.2"
 
 extra-request@^1.1.1:
   version "1.1.1"
@@ -3574,6 +3600,13 @@ iterable-operator@^0.13.2:
   integrity sha512-cVygsGfAl4FK+N88sY6CkvOzZCcCPkUZvhjjioGL4QcoUXD8N1aWZzzLYXmT3n2Xl/f4nbijz0Pha9qfIIpPkg==
   dependencies:
     "@blackglory/types" "^0.2.9"
+
+iterable-operator@^0.13.3:
+  version "0.13.3"
+  resolved "https://registry.yarnpkg.com/iterable-operator/-/iterable-operator-0.13.3.tgz#869d9f12113a54b316719fd5af21f3145dc4f79c"
+  integrity sha512-AL4PN+T5OfG9iySAdyWX8hsAEsSpAfd/ovPDGtm6O3UHHoydf3ToM2oCk23qRa7/9FC1rQ61qnNNVJaZ99b0SA==
+  dependencies:
+    "@blackglory/types" "^0.2.17"
 
 jest-changed-files@^26.6.2:
   version "26.6.2"
@@ -5283,6 +5316,11 @@ redent@^3.0.0:
     indent-string "^4.0.0"
     strip-indent "^3.0.0"
 
+reflect-metadata@^0.1.13:
+  version "0.1.13"
+  resolved "https://registry.yarnpkg.com/reflect-metadata/-/reflect-metadata-0.1.13.tgz#67ae3ca57c972a2aa1642b10fe363fe32d49dc08"
+  integrity sha512-Ts1Y/anZELhSsjMcU605fU9RE4Oi3p5ORujwbIKXfWa+0Zxs510Qrmrce5/Jowq3cHSZSJqBjypxmHarc+vEWg==
+
 regex-not@^1.0.0, regex-not@^1.0.2:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/regex-not/-/regex-not-1.0.2.tgz#1f4ece27e00b0b65e0247a6810e6a85d83a5752c"
@@ -5429,6 +5467,11 @@ ret@~0.1.10:
   version "0.1.15"
   resolved "https://registry.yarnpkg.com/ret/-/ret-0.1.15.tgz#b8a4825d5bdb1fc3f6f53c2bc33f81388681c7bc"
   integrity sha512-TTlYpa+OL+vMMNG24xSlQGEJ3B/RzEfUlLct7b5G/ytav+wPrplCpVMFuwzXbkecJrb6IYo1iFb0S9v37754mg==
+
+return-style@^0.12.2:
+  version "0.12.2"
+  resolved "https://registry.yarnpkg.com/return-style/-/return-style-0.12.2.tgz#de5b56916fa0863b3db9d703018d6e9924116faa"
+  integrity sha512-P9ABDJcqOrsYdUBXltxyO5Hs9avCeWbiKhy+5aQjn3KoEQ49HWOi50lmUj8iSlj5WpmTCnWzs9nbo1bVhDOvyA==
 
 reusify@^1.0.4:
   version "1.0.4"
