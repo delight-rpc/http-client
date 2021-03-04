@@ -2428,9 +2428,9 @@ eventemitter3@^4.0.7:
   resolved "https://registry.yarnpkg.com/eventemitter3/-/eventemitter3-4.0.7.tgz#2de9b68f6528d5644ef5c59526a1b4a07306169f"
   integrity sha512-8guHBZCwKnFhYdHr2ysuRWErTwhoN2X8XELRlrRwpmfeY2jjuUN4taQMsULKUVo1K4DvZl+0pgfyoysHxvmvEw==
 
-"eventsource@https://github.com/EventSource/eventsource#46fe04e03e54f4129a28bf75b3a1e5f4ab68b52a":
+"eventsource@git+https://github.com/EventSource/eventsource.git#46fe04e03e54f4129a28bf75b3a1e5f4ab68b52a":
   version "1.0.7"
-  resolved "https://github.com/EventSource/eventsource#46fe04e03e54f4129a28bf75b3a1e5f4ab68b52a"
+  resolved "git+https://github.com/EventSource/eventsource.git#46fe04e03e54f4129a28bf75b3a1e5f4ab68b52a"
   dependencies:
     original "^1.0.0"
 
@@ -2568,10 +2568,10 @@ extra-dom@^0.2.9:
     "@blackglory/types" "^0.2.13"
     iterable-operator "^0.13.2"
 
-extra-fetch@^1.0.0:
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/extra-fetch/-/extra-fetch-1.0.2.tgz#9c3fab030ef71fd428021ab4c978866330723b7c"
-  integrity sha512-ijLcGHH3XgKMnyHRu4HFPw8tmVW/4oClgkm+uMIRmPcrUKQcfw+QOcm6qm9d0xYpl/Amwe9zloX6w0/WUhbWPA==
+extra-fetch@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/extra-fetch/-/extra-fetch-1.1.0.tgz#3e8fc08f8af9ac09562f79c6c646292a3c509f02"
+  integrity sha512-1h4ANRTT1PYZAKL3aWHvccaiyfxRyqDsbbV5n2W6AgYdVLjr5YfXnGUgl5Lh2nfR6VqOb2PcABjymUFyCMPGfg==
   dependencies:
     abort-controller "^3.0.0"
     domexception "^2.0.1"
@@ -2594,13 +2594,13 @@ extra-promise@^0.14.5:
     reflect-metadata "^0.1.13"
     return-style "^0.12.2"
 
-extra-request@^1.1.1:
-  version "1.1.1"
-  resolved "https://registry.yarnpkg.com/extra-request/-/extra-request-1.1.1.tgz#c88c2ed78718b29fb00f22a83c6dc7beb78a7a8d"
-  integrity sha512-f1o7UQUyDPgpDgOxLwOfapAgF5M/HoKWz+7HKo1T6Y7TBBvirNDqOMKhzVpiy9U+Anx2+XZdGXJD1vYTnhZuYQ==
+extra-request@^1.1.2:
+  version "1.1.2"
+  resolved "https://registry.yarnpkg.com/extra-request/-/extra-request-1.1.2.tgz#9965fc5c802d3a7730bda2c36f755e3210b8a5ed"
+  integrity sha512-rhT/fQV076drq0kUTKtnKFL7Y/7BcrMcoIhaqtI155/pWGKH122qodCl0leknxmpUdu4lh6x68EUp/DtAsybVw==
   dependencies:
     "@blackglory/errors" "^1.1.2"
-    "@blackglory/types" "^0.2.17"
+    "@blackglory/types" "^0.2.23"
     js-base64 "^3.6.0"
     papaparse "^5.3.0"
 
