@@ -310,12 +310,15 @@
   dependencies:
     "@blackglory/errors" "^1.1.2"
 
-"@blackglory/jest-matchers@^0.1.10":
-  version "0.1.10"
-  resolved "https://registry.yarnpkg.com/@blackglory/jest-matchers/-/jest-matchers-0.1.10.tgz#785f8d01628a0782a8e9a72791497d721c8d8d11"
-  integrity sha512-zDG+8kws6I9sIKraY2+G0Ty5Zg80hjQAL/UqYp1Ne9ZyrNiaAdVNz21ZJFlUKSi/ZkjACRylZVOEsikryZvrSA==
+"@blackglory/jest-matchers@^0.1.12":
+  version "0.1.12"
+  resolved "https://registry.yarnpkg.com/@blackglory/jest-matchers/-/jest-matchers-0.1.12.tgz#de16c177620f169152e8dc34e9f488ca87662485"
+  integrity sha512-kNP0i/p9ZQFw4xT1VXEgOJZYuIaJ9HWsgUd5fT2lYq4fWSE6Y8i6rr1KpuesZDyL3CKIeydyz47/S81YgP802A==
   dependencies:
-    "@blackglory/types" "^0.2.17"
+    "@blackglory/types" "^0.3.0"
+    "@types/node" "^14.14.31"
+    extra-promise "^0.15.3"
+    extra-stream "^0.1.0"
     fs-extra "^9.0.1"
     jest-diff "^26.6.2"
 
@@ -344,7 +347,7 @@
     ajv "^7.1.1"
     extra-dom "^0.2.9"
 
-"@blackglory/types@^0.2.19", "@blackglory/types@^0.2.23":
+"@blackglory/types@^0.2.19":
   version "0.2.23"
   resolved "https://registry.yarnpkg.com/@blackglory/types/-/types-0.2.23.tgz#4e4d79f545fdf9901bedd4df3092e14897073717"
   integrity sha512-shJnVh+oSAoxtBEQyEjGta+nqzfwOfvKyHmEG1GkrwdQFQHhtkQsKwEu9TI4UiGc5rt0X6iLXvG96j4bB504/w==
@@ -352,6 +355,13 @@
     "@types/node" "^14.14.31"
     ajv "^7.1.1"
     extra-dom "^0.2.12"
+
+"@blackglory/types@^0.3.0":
+  version "0.3.0"
+  resolved "https://registry.yarnpkg.com/@blackglory/types/-/types-0.3.0.tgz#deb85aa266b8e717da6de300f8b5e64fca46ac4f"
+  integrity sha512-XZf98s8Rl/5ZAvNwK8XI2EQTZSUA8L8vvwo2JhQ26+gWiqNmY1u/Jn0lEGYOAZdPtAw/4sdq75IB5+Hid6gwJQ==
+  dependencies:
+    ajv "^7.1.1"
 
 "@cnakazawa/watch@^1.0.3":
   version "1.0.4"
@@ -2124,13 +2134,13 @@ delayed-stream@~1.0.0:
   resolved "https://registry.yarnpkg.com/delayed-stream/-/delayed-stream-1.0.0.tgz#df3ae199acadfb7d440aaae0b29e2272b24ec619"
   integrity sha1-3zrhmayt+31ECqrgsp4icrJOxhk=
 
-delight-rpc@^0.1.13:
-  version "0.1.13"
-  resolved "https://registry.yarnpkg.com/delight-rpc/-/delight-rpc-0.1.13.tgz#e4e4bef5e3ae2211825745e796da9a99e3418e0a"
-  integrity sha512-GQDvIFgRp8F8EExyPTqRbVOwLPBoeGNlPcRenUg1XV6Bdds029BvzWfcCj22y68eV8FnaT1ZdTdb6MaaKHCdvg==
+delight-rpc@^0.1.14:
+  version "0.1.14"
+  resolved "https://registry.yarnpkg.com/delight-rpc/-/delight-rpc-0.1.14.tgz#7ba20e7241527a93e66eee9dce230f631600b259"
+  integrity sha512-9hDYWKOu1i/b2S5cIoz/ac77M0fG72gm/qQtJPMkS3FRRRXaqOcwuMu7uzeoAAVCJpFE1bed904VpRpjfQRJ6Q==
   dependencies:
     "@blackglory/errors" "^1.1.2"
-    "@blackglory/types" "^0.2.23"
+    "@blackglory/types" "^0.3.0"
     json-rpc-proxy "^0.6.10"
     nanoid "^3.1.20"
 
@@ -2428,9 +2438,9 @@ eventemitter3@^4.0.7:
   resolved "https://registry.yarnpkg.com/eventemitter3/-/eventemitter3-4.0.7.tgz#2de9b68f6528d5644ef5c59526a1b4a07306169f"
   integrity sha512-8guHBZCwKnFhYdHr2ysuRWErTwhoN2X8XELRlrRwpmfeY2jjuUN4taQMsULKUVo1K4DvZl+0pgfyoysHxvmvEw==
 
-"eventsource@git+https://github.com/EventSource/eventsource.git#46fe04e03e54f4129a28bf75b3a1e5f4ab68b52a":
+"eventsource@https://github.com/EventSource/eventsource#46fe04e03e54f4129a28bf75b3a1e5f4ab68b52a":
   version "1.0.7"
-  resolved "git+https://github.com/EventSource/eventsource.git#46fe04e03e54f4129a28bf75b3a1e5f4ab68b52a"
+  resolved "https://github.com/EventSource/eventsource#46fe04e03e54f4129a28bf75b3a1e5f4ab68b52a"
   dependencies:
     original "^1.0.0"
 
@@ -2580,37 +2590,44 @@ extra-fetch@^1.2.0:
     formdata-node "^2.4.0"
     node-fetch "3.0.0-beta.9"
 
-extra-promise@^0.15.1:
-  version "0.15.1"
-  resolved "https://registry.yarnpkg.com/extra-promise/-/extra-promise-0.15.1.tgz#a70b9d24771cc913f557d6f3bf096ed9972fb7b4"
-  integrity sha512-46IJxnryj0foLIjmVCyJucBFM7FXuMtcpXNwP6jWMYehJT4BtueAgvMCRi16I8ONItmTOFpozJJDsE51odJy5A==
+extra-promise@^0.15.3, extra-promise@^0.15.4:
+  version "0.15.4"
+  resolved "https://registry.yarnpkg.com/extra-promise/-/extra-promise-0.15.4.tgz#762624c442e703bca0f2e953fcf3d8375d3100e4"
+  integrity sha512-mWwkU+hyPaPmRn8eGmaLLSQc/avRAHd21XKIgvjnUI3sJ6bJRSzynXJheuZVkUsDJSG41rqJzNaIl5tlgPIlcg==
   dependencies:
     "@blackglory/errors" "^1.1.2"
     "@blackglory/structures" "^0.1.13"
-    "@blackglory/types" "^0.2.23"
+    "@blackglory/types" "^0.3.0"
     eventemitter3 "^4.0.7"
     extra-fetch "^1.2.0"
-    iterable-operator "^0.13.3"
+    iterable-operator "^0.13.4"
     reflect-metadata "^0.1.13"
     return-style "^0.12.2"
 
-extra-request@^1.1.2:
-  version "1.1.2"
-  resolved "https://registry.yarnpkg.com/extra-request/-/extra-request-1.1.2.tgz#9965fc5c802d3a7730bda2c36f755e3210b8a5ed"
-  integrity sha512-rhT/fQV076drq0kUTKtnKFL7Y/7BcrMcoIhaqtI155/pWGKH122qodCl0leknxmpUdu4lh6x68EUp/DtAsybVw==
+extra-request@^1.1.7:
+  version "1.1.7"
+  resolved "https://registry.yarnpkg.com/extra-request/-/extra-request-1.1.7.tgz#64abaa6b0ffbe74952408e098a35d6d234d9e590"
+  integrity sha512-azLtvwwS/D0AcY3K0e++dxSJVwi5MPkH8DqRSEE0DBBH0i+gNPo+X/AhO6l1UlqVbhbMOiRYUC92AugD4TFyVg==
   dependencies:
     "@blackglory/errors" "^1.1.2"
-    "@blackglory/types" "^0.2.23"
+    "@blackglory/types" "^0.3.0"
     js-base64 "^3.6.0"
     papaparse "^5.3.0"
 
-extra-response@^0.3.2:
-  version "0.3.2"
-  resolved "https://registry.yarnpkg.com/extra-response/-/extra-response-0.3.2.tgz#0a8cb5f3e256d41bca6ef5d9857a523001a297b4"
-  integrity sha512-OqHh+r2WLVrPs4y9aRLcLBDn+8dPHnTCfq2QX+ViwzFmmenf/uVz9Dwvkn9ejDI2puRbMcUbIINQtZjpPM2bmg==
+extra-response@^0.3.3:
+  version "0.3.3"
+  resolved "https://registry.yarnpkg.com/extra-response/-/extra-response-0.3.3.tgz#df4cf415094f3a168af87f30408c53fa5a0b9154"
+  integrity sha512-lvTdBK+/+5zfatTpYP77K69WGp+HqRDI/uaFy5ualkCJtPhSP2hmHJUhspXJ4sKvYXQH4mrY3R4b/F7HytXMew==
   dependencies:
-    iterable-operator "^0.13.3"
+    iterable-operator "^0.13.4"
     papaparse "^5.3.0"
+
+extra-stream@^0.1.0:
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/extra-stream/-/extra-stream-0.1.0.tgz#b7a764d014bed40ea26ee95f803f67bdc55913a9"
+  integrity sha512-0lmZHNswNEPCP4gyW2pTOi73mxDt2Z7qY3I4Fs27krNWrOhhDsoOg3zJqdGQ/b6S+GTM+JP5slHRk89kRcZZKw==
+  dependencies:
+    "@blackglory/types" "^0.3.0"
 
 extsprintf@1.3.0:
   version "1.3.0"
@@ -3593,12 +3610,12 @@ iterable-operator@^0.13.2:
   dependencies:
     "@blackglory/types" "^0.2.9"
 
-iterable-operator@^0.13.3:
-  version "0.13.3"
-  resolved "https://registry.yarnpkg.com/iterable-operator/-/iterable-operator-0.13.3.tgz#869d9f12113a54b316719fd5af21f3145dc4f79c"
-  integrity sha512-AL4PN+T5OfG9iySAdyWX8hsAEsSpAfd/ovPDGtm6O3UHHoydf3ToM2oCk23qRa7/9FC1rQ61qnNNVJaZ99b0SA==
+iterable-operator@^0.13.4:
+  version "0.13.4"
+  resolved "https://registry.yarnpkg.com/iterable-operator/-/iterable-operator-0.13.4.tgz#0caf13e139f0da46b2caa1b42f14f4d84b39ae0b"
+  integrity sha512-oTDyk4RqYvbWG5oQAK1Q1cvLy0EsSCzvuZ+8AXwbPoJJYHDC6Ivja1JKw5XO31Y5UXdftShc+frgUO/Zt83clQ==
   dependencies:
-    "@blackglory/types" "^0.2.17"
+    "@blackglory/types" "^0.3.0"
 
 jest-changed-files@^26.6.2:
   version "26.6.2"
