@@ -63,14 +63,14 @@
     "ts-jest": "^26.5.3",
     "tscpaths": "^0.0.9",
     "tslib": "^2.1.0",
-    "typescript": "^4.2.2"
+    "typescript": "^4.2.3"
   },
   "dependencies": {
     "@blackglory/http-status": "^1.0.0",
     "@blackglory/types": "^0.2.23",
     "delight-rpc": "^0.1.13",
-    "extra-fetch": "^1.1.0",
-    "extra-promise": "^0.14.5",
+    "extra-fetch": "^1.2.0",
+    "extra-promise": "^0.15.1",
     "extra-request": "^1.1.2",
     "extra-response": "^0.3.2"
   }
