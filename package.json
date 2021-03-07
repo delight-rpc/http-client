@@ -66,8 +66,8 @@
   },
   "dependencies": {
     "@blackglory/http-status": "^1.0.0",
-    "@blackglory/types": "^0.3.0",
-    "delight-rpc": "^0.1.14",
+    "@blackglory/types": "^0.3.1",
+    "delight-rpc": "^0.1.15",
     "extra-fetch": "^1.2.0",
     "extra-promise": "^0.15.4",
     "extra-request": "^1.1.7",
