@@ -14,6 +14,8 @@ yarn add @delight-rpc/http-client
 interface IClientOptions {
   host: string
   port: number
+  timeout?: number
+  keepalive?: boolean
 }
 ```
 

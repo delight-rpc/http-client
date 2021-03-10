@@ -2,7 +2,7 @@ import * as DelightRPC from 'delight-rpc'
 import { fetch } from 'extra-fetch'
 import { post } from 'extra-request'
 import { ok, toJSON } from 'extra-response'
-import { json, host, port, signal } from 'extra-request/lib/es2015/transformers'
+import { json, host, port, signal, keepalive } from 'extra-request/lib/es2015/transformers'
 import { JsonRpcResponse, Json  } from '@blackglory/types'
 import { timeoutSignal } from 'extra-promise'
 
@@ -10,6 +10,7 @@ export interface IClientOptions {
   host: string
   port: number
   timeout?: number
+  keepalive?: boolean
 }
 
 export function createClient<IAPI extends object>(options: IClientOptions): DelightRPC.RequestProxy<IAPI> {
@@ -19,6 +20,7 @@ export function createClient<IAPI extends object>(options: IClientOptions): Deli
     , port(options.port)
     , json(jsonRpc)
     , options.timeout && signal(timeoutSignal(options.timeout))
+    , keepalive(options.keepalive)
     )
 
     return await fetch(req)
