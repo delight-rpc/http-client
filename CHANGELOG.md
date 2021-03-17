@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.2.11](https://github.com/delight-rpc/http-client/compare/v0.2.10...v0.2.11) (2021-03-17)
+
+
+### Bug Fixes
+
+* build ([c2b0a1c](https://github.com/delight-rpc/http-client/commit/c2b0a1c42a7302c99083b008da6de667b3d27d3f))
+
 ### [0.2.10](https://github.com/delight-rpc/http-client/compare/v0.2.9...v0.2.10) (2021-03-17)
 
 ### [0.2.9](https://github.com/delight-rpc/http-client/compare/v0.2.8...v0.2.9) (2021-03-10)
