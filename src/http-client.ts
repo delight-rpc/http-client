@@ -3,7 +3,8 @@ import { fetch } from 'extra-fetch'
 import { post } from 'extra-request'
 import { ok, toJSON } from 'extra-response'
 import { json, host, port, signal, keepalive } from 'extra-request/lib/es2015/transformers'
-import { JsonRpcResponse, Json  } from '@blackglory/types'
+import { JsonRpcResponse } from '@blackglory/types'
+import { Json } from 'justypes'
 import { timeoutSignal } from 'extra-promise'
 
 export interface IClientOptions {
