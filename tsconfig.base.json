@@ -4,7 +4,7 @@
   , "module": "CommonJS"
   , "strict": true
   , "noUnusedLocals": true
-  , "noUnusedParameters": false
+  , "noUnusedParameters": true
   , "experimentalDecorators": true
   , "emitDecoratorMetadata": false
   , "baseUrl": "."
