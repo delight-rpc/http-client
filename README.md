@@ -16,6 +16,10 @@ interface IClientOptions {
   port: number
   timeout?: number
   keepalive?: boolean
+  basicAuth?: {
+    username: string
+    password: string
+  }
 }
 ```
 

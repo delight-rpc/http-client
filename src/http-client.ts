@@ -2,7 +2,7 @@ import * as DelightRPC from 'delight-rpc'
 import { fetch } from 'extra-fetch'
 import { post } from 'extra-request'
 import { ok, toJSON } from 'extra-response'
-import { json, host, port, signal, keepalive } from 'extra-request/lib/es2015/transformers'
+import { json, host, port, signal, keepalive, basicAuth } from 'extra-request/lib/es2018/transformers'
 import { JsonRpcResponse } from '@blackglory/types'
 import { Json } from 'justypes'
 import { timeoutSignal } from 'extra-promise'
@@ -12,13 +12,20 @@ export interface IClientOptions {
   port: number
   timeout?: number
   keepalive?: boolean
+  basicAuth?: {
+    username: string
+    password: string
+  }
 }
 
 export function createClient<IAPI extends object>(options: IClientOptions): DelightRPC.RequestProxy<IAPI> {
   const client = DelightRPC.createClient<IAPI>(async jsonRpc => {
+    const auth = options.basicAuth
+
     const req = post(
       host(options.host)
     , port(options.port)
+    , auth && basicAuth(auth.username, auth.password)
     , json(jsonRpc)
     , options.timeout && signal(timeoutSignal(options.timeout))
     , keepalive(options.keepalive)
