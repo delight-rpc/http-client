@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.2.15](https://github.com/delight-rpc/http-client/compare/v0.2.14...v0.2.15) (2021-06-07)
+
+
+### Features
+
+* add basicAuth into IClientOptions ([9dea059](https://github.com/delight-rpc/http-client/commit/9dea059bbce4485a542e4e37004bac323ae2793d))
+
 ### [0.2.14](https://github.com/delight-rpc/http-client/compare/v0.2.13...v0.2.14) (2021-05-17)
 
 ### [0.2.13](https://github.com/delight-rpc/http-client/compare/v0.2.12...v0.2.13) (2021-03-27)
