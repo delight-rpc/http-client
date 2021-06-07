@@ -12,8 +12,7 @@ yarn add @delight-rpc/http-client
 
 ```ts
 interface IClientOptions {
-  host: string
-  port: number
+  server: string
   timeout?: number
   keepalive?: boolean
   basicAuth?: {
