@@ -38,7 +38,7 @@
     }
   },
   "devDependencies": {
-    "@blackglory/jest-matchers": "^0.1.17",
+    "@blackglory/jest-matchers": "^0.1.18",
     "@commitlint/cli": "^12.1.4",
     "@commitlint/config-conventional": "^12.1.4",
     "@rollup/plugin-commonjs": "^19.0.0",
@@ -46,32 +46,32 @@
     "@rollup/plugin-node-resolve": "^13.0.0",
     "@rollup/plugin-replace": "^2.4.2",
     "@rollup/plugin-typescript": "^8.2.1",
-    "@typescript-eslint/eslint-plugin": "^4.23.0",
-    "@typescript-eslint/parser": "^4.23.0",
-    "eslint": "^7.26.0",
+    "@typescript-eslint/eslint-plugin": "^4.26.0",
+    "@typescript-eslint/parser": "^4.26.0",
+    "eslint": "^7.28.0",
     "husky": "4",
-    "jest": "^26.6.3",
+    "jest": "^27.0.4",
     "jest-extended": "^0.11.5",
-    "msw": "^0.28.2",
+    "msw": "^0.29.0",
     "npm-run-all": "^4.1.5",
     "rimraf": "^3.0.2",
-    "rollup": "^2.48.0",
+    "rollup": "^2.51.0",
     "rollup-plugin-analyzer": "^4.0.0",
     "rollup-plugin-terser": "^7.0.2",
     "standard-version": "^9.3.0",
-    "ts-jest": "^26.5.6",
+    "ts-jest": "^27.0.3",
     "tscpaths": "^0.0.9",
     "tslib": "^2.2.0",
-    "typescript": "^4.2.4"
+    "typescript": "^4.3.2"
   },
   "dependencies": {
     "@blackglory/http-status": "^1.0.0",
-    "@blackglory/types": "^0.4.2",
+    "@blackglory/types": "^0.4.3",
     "delight-rpc": "^0.1.18",
     "extra-fetch": "^1.7.1",
-    "extra-promise": "^0.17.0",
+    "extra-promise": "^0.17.3",
     "extra-request": "^2.1.4",
     "extra-response": "^0.3.5",
-    "justypes": "^0.1.1"
+    "justypes": "^0.1.2"
   }
 }
