@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.3.0](https://github.com/delight-rpc/http-client/compare/v0.2.15...v0.3.0) (2021-06-07)
+
+
+### ⚠ BREAKING CHANGES
+
+* replace options host and port with server
+
+### Features
+
+* host, port => server ([7ff66d0](https://github.com/delight-rpc/http-client/commit/7ff66d0b31b63cf4eb3ab702d3054b3e84cd1ae6))
+
 ### [0.2.15](https://github.com/delight-rpc/http-client/compare/v0.2.14...v0.2.15) (2021-06-07)
 
 
