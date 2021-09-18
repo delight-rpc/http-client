@@ -2,7 +2,7 @@ import * as DelightRPC from 'delight-rpc'
 import { fetch } from 'extra-fetch'
 import { post } from 'extra-request'
 import { ok, toJSON } from 'extra-response'
-import { json, url, signal, keepalive, basicAuth } from 'extra-request/lib/es2018/transformers'
+import { json, url, signal, keepalive, basicAuth } from 'extra-request/transformers/index.js'
 import { JsonRpcResponse, Json } from 'justypes'
 import { timeoutSignal } from 'extra-promise'
 
