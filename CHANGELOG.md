@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.3.6](https://github.com/delight-rpc/http-client/compare/v0.3.5...v0.3.6) (2021-10-06)
+
+
+### Features
+
+* export AbortError, HTTPError ([28638d4](https://github.com/delight-rpc/http-client/commit/28638d4920e221e34bc390da435e125eb1d5ee04))
+
 ### [0.3.5](https://github.com/delight-rpc/http-client/compare/v0.3.4...v0.3.5) (2021-09-18)
 
 ### [0.3.4](https://github.com/delight-rpc/http-client/compare/v0.3.3...v0.3.4) (2021-09-18)
