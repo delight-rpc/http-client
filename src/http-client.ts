@@ -6,6 +6,9 @@ import { json, url, signal, keepalive, basicAuth } from 'extra-request/transform
 import { JsonRpcResponse, Json } from 'justypes'
 import { timeoutSignal } from 'extra-promise'
 
+export { HTTPError } from 'extra-response'
+export { AbortError } from 'extra-fetch'
+
 export interface IClientOptions {
   server: string
   timeout?: number
@@ -17,21 +20,27 @@ export interface IClientOptions {
 }
 
 export function createClient<IAPI extends object>(options: IClientOptions): DelightRPC.RequestProxy<IAPI> {
-  const client = DelightRPC.createClient<IAPI>(async jsonRpc => {
-    const auth = options.basicAuth
+  const client = DelightRPC.createClient<IAPI>(
+    /**
+     * @throws {AbortError}
+     * @throws {HTTPError}
+     */
+    async function jsonRpc() {
+      const auth = options.basicAuth
 
-    const req = post(
-      url(options.server)
-    , auth && basicAuth(auth.username, auth.password)
-    , json(jsonRpc)
-    , options.timeout && signal(timeoutSignal(options.timeout))
-    , keepalive(options.keepalive)
-    )
+      const req = post(
+        url(options.server)
+      , auth && basicAuth(auth.username, auth.password)
+      , json(jsonRpc)
+      , options.timeout && signal(timeoutSignal(options.timeout))
+      , keepalive(options.keepalive)
+      )
 
-    return await fetch(req)
-      .then(ok)
-      .then(toJSON) as JsonRpcResponse<Json>
-  })
+      return await fetch(req)
+        .then(ok)
+        .then(toJSON) as JsonRpcResponse<Json>
+    }
+  )
 
   return client
 }
