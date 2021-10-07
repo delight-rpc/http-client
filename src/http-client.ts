@@ -25,7 +25,7 @@ export function createClient<IAPI extends object>(options: IClientOptions): Deli
      * @throws {AbortError}
      * @throws {HTTPError}
      */
-    async function jsonRpc() {
+    async function request(jsonRpc) {
       const auth = options.basicAuth
 
       const req = post(
