@@ -1,4 +1,10 @@
 # @delight-rpc/http-client
+The HTTP client library of [delight-rpc],
+it needs to be used with the server implementation [@delight-rpc/http-server].
+
+[delight-rpc]: https://www.npmjs.com/package/delight-rpc
+[@delight-rpc/http-server]: https://www.npmjs.com/package/@delight-rpc/http-server
+
 
 ## Install
 
@@ -6,6 +12,23 @@
 npm install --save @delight-rpc/http-client
 # or
 yarn add @delight-rpc/http-client
+```
+
+## Usage
+
+```ts
+// api.d.ts
+interface IAPI {
+  echo(message: string): string
+}
+
+// client.ts
+const client = createClient<IAPI>({
+  server: 'http://localhost:8080'
+, keepalive: true
+})
+
+await client.echo('hello')
 ```
 
 ## API
