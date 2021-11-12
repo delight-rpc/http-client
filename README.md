@@ -7,7 +7,6 @@ it needs to be used with the server implementation [@delight-rpc/http-server].
 
 
 ## Install
-
 ```sh
 npm install --save @delight-rpc/http-client
 # or
@@ -15,7 +14,6 @@ yarn add @delight-rpc/http-client
 ```
 
 ## Usage
-
 ```ts
 // api.d.ts
 interface IAPI {
@@ -32,7 +30,6 @@ await client.echo('hello')
 ```
 
 ## API
-
 ```ts
 interface IClientOptions {
   server: string
@@ -46,7 +43,6 @@ interface IClientOptions {
 ```
 
 ### createClient
-
 ```ts
 function createClient<IAPI extends object>(options: IClientOptions): DelightRPC.RequestProxy<IAPI>
 ```
