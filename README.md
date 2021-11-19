@@ -44,5 +44,7 @@ interface IClientOptions {
 
 ### createClient
 ```ts
-function createClient<IAPI extends object>(options: IClientOptions): DelightRPC.RequestProxy<IAPI>
+function createClient<IAPI extends object>(
+  options: IClientOptions
+): DelightRPC.ClientProxy<IAPI>
 ```
