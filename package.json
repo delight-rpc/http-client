@@ -12,9 +12,6 @@
   "repository": "git@github.com:delight-rpc/http-client.git",
   "author": "BlackGlory <woshenmedoubuzhidao@blackglory.me>",
   "license": "MIT",
-  "engines": {
-    "node": ">=16"
-  },
   "scripts": {
     "prepare": "ts-patch install -s",
     "lint": "eslint --ext .js,.jsx,.ts,.tsx --quiet src",
@@ -38,7 +35,7 @@
     }
   },
   "devDependencies": {
-    "@blackglory/jest-matchers": "^0.1.21",
+    "@blackglory/jest-matchers": "^0.2.1",
     "@commitlint/cli": "^15.0.0",
     "@commitlint/config-conventional": "^15.0.0",
     "@rollup/plugin-commonjs": "^21.0.1",
@@ -68,9 +65,9 @@
   },
   "dependencies": {
     "@blackglory/http-status": "^1.0.1",
-    "extra-fetch": "^1.8.3",
-    "extra-promise": "^0.20.0",
-    "extra-request": "^3.0.3",
+    "extra-abort": "^0.1.0",
+    "extra-fetch": "^1.8.4",
+    "extra-request": "^4.0.1",
     "extra-response": "^0.3.8",
     "justypes": "^0.1.6"
   },

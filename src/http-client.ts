@@ -4,7 +4,7 @@ import { post } from 'extra-request'
 import { ok, toJSON } from 'extra-response'
 import { json, url, signal, keepalive, basicAuth } from 'extra-request/transformers/index.js'
 import { Json } from 'justypes'
-import { timeoutSignal } from 'extra-promise'
+import { timeoutSignal } from 'extra-abort'
 
 export { HTTPError } from 'extra-response'
 export { AbortError } from 'extra-fetch'
