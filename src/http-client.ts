@@ -21,6 +21,7 @@ export interface IClientOptions {
 
 export function createClient<IAPI extends object>(
   options: IClientOptions
+, parametersValidators?: DelightRPC.ParameterValidators<IAPI>
 ): DelightRPC.ClientProxy<IAPI> {
   const client = DelightRPC.createClient<IAPI>(
     /**
@@ -42,6 +43,7 @@ export function createClient<IAPI extends object>(
         .then(ok)
         .then(toJSON) as DelightRPC.IResponse<Json>
     }
+  , parametersValidators
   )
 
   return client
