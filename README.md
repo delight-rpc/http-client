@@ -46,6 +46,6 @@ interface IClientOptions {
 ```ts
 function createClient<IAPI extends object>(
   options: IClientOptions
-, parametersValidators?: DelightRPC.ParameterValidators<IAPI>
+, parameterValidators?: DelightRPC.ParameterValidators<IAPI>
 ): DelightRPC.ClientProxy<IAPI>
 ```
