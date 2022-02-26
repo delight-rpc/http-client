@@ -1,10 +1,10 @@
-import { server } from '@test/http-client.mock'
+import { buildServer } from './http-client.mock'
 import { createClient } from '@src/http-client'
+import { startService, stopService, getAddress } from './utils'
 import '@blackglory/jest-matchers'
 
-beforeAll(() => server.listen({ onUnhandledRequest: 'error' }))
-beforeEach(() => server.resetHandlers())
-afterAll(() => server.close())
+beforeAll(() => startService(buildServer))
+afterAll(stopService)
 
 interface API {
   echo(message: string): string
@@ -12,7 +12,7 @@ interface API {
 
 describe('createClient', () => {
   test('echo', async () => {
-    const client = createClient<API>({ server: 'http://localhost' })
+    const client = createClient<API>({ server: getAddress() })
 
     const result = client.echo('hello')
     const proResult = await result

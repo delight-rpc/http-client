@@ -7,7 +7,6 @@ import { Json } from 'justypes'
 import { timeoutSignal } from 'extra-abort'
 
 export { HTTPError } from 'extra-response'
-export { AbortError } from 'extra-fetch'
 
 export interface IClientOptions {
   server: string

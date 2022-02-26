@@ -1,5 +1,4 @@
-import { setupServer } from 'msw/node'
-import { rest } from 'msw'
+import fastify from 'fastify'
 import { createResponse } from 'delight-rpc'
 
 const API = {
@@ -8,13 +7,14 @@ const API = {
   }
 }
 
-export const server = setupServer(
-  rest.post('/', async (req, res, ctx) => {
+export function buildServer() {
+  const server = fastify()
+
+  server.post('/', async (req, reply) => {
     const result = await createResponse(API, req.body as any)
 
-    return res(
-      ctx.status(200)
-    , ctx.json(result)
-    )
+    return reply.status(200).send(result)
   })
-)
+
+  return server
+}
