@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.0.0](https://github.com/delight-rpc/http-client/compare/v3.0.0...v4.0.0) (2022-02-26)
+
+
+### ⚠ BREAKING CHANGES
+
+* requires Node.js v16
+
+### Features
+
+* use extra-fetch v2 ([aa37960](https://github.com/delight-rpc/http-client/commit/aa379604d0f43dda0e0af829b2ea597dd6c19c07))
+
 ## [3.0.0](https://github.com/delight-rpc/http-client/compare/v2.2.0...v3.0.0) (2022-02-10)
 
 
