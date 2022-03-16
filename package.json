@@ -11,8 +11,8 @@
   "engines": {
     "node": ">=16"
   },
-  "main": "lib/es2018/index.js",
-  "types": "lib/es2018/index.d.ts",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
   "repository": "git@github.com:delight-rpc/http-client.git",
   "author": "BlackGlory <woshenmedoubuzhidao@blackglory.me>",
   "license": "MIT",
