@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [5.0.1](https://github.com/delight-rpc/http-client/compare/v5.0.0...v5.0.1) (2022-03-16)
+
+
+### Bug Fixes
+
+* main pathname ([bdce2ed](https://github.com/delight-rpc/http-client/commit/bdce2ed807dd4c46125c13f8081b4f8554ce3e43))
+
 ## [5.0.0](https://github.com/delight-rpc/http-client/compare/v4.0.0...v5.0.0) (2022-03-16)
 
 
