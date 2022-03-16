@@ -10,11 +10,7 @@ const UMD_NAME = 'DelightRpcHttpClient'
 
 export default [
   ...createOptions({
-    directory: 'es2015'
-  , target: 'ES2015'
-  })
-, ...createOptions({
-    directory: 'es2018'
+    directory: '.'
   , target: 'ES2018'
   })
 ]
