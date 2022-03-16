@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [5.0.0](https://github.com/delight-rpc/http-client/compare/v4.0.0...v5.0.0) (2022-03-16)
+
+
+### ⚠ BREAKING CHANGES
+
+* It is an ESM now
+
+* use extra-fetch v3 ([6ae05a7](https://github.com/delight-rpc/http-client/commit/6ae05a7cc855f38b5b5a77f42f0d2d1d7e6d4003))
+
 ## [4.0.0](https://github.com/delight-rpc/http-client/compare/v3.0.0...v4.0.0) (2022-02-26)
 
 
