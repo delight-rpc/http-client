@@ -50,3 +50,11 @@ function createClient<IAPI extends object>(
 , expectedVersion?: `${number}.${number}.${number}`
 ): DelightRPC.ClientProxy<IAPI>
 ```
+
+### createBatchClient
+```ts
+function createBatchClient(
+  options: IClientOptions
+, expectedVersion?: `${number}.${number}.${number}`
+): DelightRPC.BatchClient
+```

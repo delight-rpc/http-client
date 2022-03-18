@@ -23,29 +23,45 @@ export function createClient<IAPI extends object>(
 , parameterValidators?: DelightRPC.ParameterValidators<IAPI>
 , expectedVersion?: `${number}.${number}.${number}`
 ): DelightRPC.ClientProxy<IAPI> {
-  const client = DelightRPC.createClient<IAPI>(
-    /**
-     * @throws {AbortError}
-     * @throws {HTTPError}
-     */
-    async function send(request) {
-      const auth = options.basicAuth
-
-      const req = post(
-        url(options.server)
-      , auth && basicAuth(auth.username, auth.password)
-      , json(request)
-      , options.timeout && signal(timeoutSignal(options.timeout))
-      , keepalive(options.keepalive)
-      )
-
-      return await fetch(req)
-        .then(ok)
-        .then(toJSON) as DelightRPC.IResponse<Json>
-    }
+  const client = DelightRPC.createClient<IAPI, Json>(
+    createSend(options)
   , parameterValidators
   , expectedVersion
   )
 
   return client
+}
+
+export function createBatchClient(
+  options: IClientOptions
+, expectedVersion?: `${number}.${number}.${number}`
+): DelightRPC.BatchClient {
+  const client = new DelightRPC.BatchClient<Json>(
+    createSend(options)
+  , expectedVersion
+  )
+
+  return client
+}
+
+function createSend<T>(options: IClientOptions) {
+  /**
+   * @throws {AbortError}
+   * @throws {HTTPError}
+   */
+  return async function (request: DelightRPC.IRequest<Json> | DelightRPC.IBatchRequest<Json>) {
+    const auth = options.basicAuth
+
+    const req = post(
+      url(options.server)
+    , auth && basicAuth(auth.username, auth.password)
+    , json(request)
+    , options.timeout && signal(timeoutSignal(options.timeout))
+    , keepalive(options.keepalive)
+    )
+
+    return await fetch(req)
+      .then(ok)
+      .then(toJSON) as T
+  }
 }

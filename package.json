@@ -76,6 +76,6 @@
     "justypes": "^2.0.0"
   },
   "peerDependencies": {
-    "delight-rpc": "^2.0.0"
+    "delight-rpc": "^2.1.1"
   }
 }
