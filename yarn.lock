@@ -2380,18 +2380,19 @@ delayed-stream@~1.0.0:
   resolved "https://registry.yarnpkg.com/delayed-stream/-/delayed-stream-1.0.0.tgz#df3ae199acadfb7d440aaae0b29e2272b24ec619"
   integrity sha1-3zrhmayt+31ECqrgsp4icrJOxhk=
 
-delight-rpc@^2.0.0:
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/delight-rpc/-/delight-rpc-2.0.0.tgz#2851a66c5c25c4469acf61b1326f69221a48c25e"
-  integrity sha512-uHUSHJR9Z/MXQpuV60ZmNRDX5U56yiB2bev3iyNHd5KWZr+rNQBfmfO9rkpTMjnM84E8hxBD1Uz/vSd7jc4/0Q==
+delight-rpc@^2.1.1:
+  version "2.1.1"
+  resolved "https://registry.yarnpkg.com/delight-rpc/-/delight-rpc-2.1.1.tgz#552fe0bbbfb322e169e8262ce6621d9567830e89"
+  integrity sha512-vYv022isAvD/P83dOpV3sqvdDPrVuXJVCVEJ8rPeAi+hBoYej0KLOomhd3mpF0IP4f3eh84TEQ2r+xXrA89j3g==
   dependencies:
     "@blackglory/errors" "^2.2.0"
-    "@blackglory/go" "^0.1.1"
-    "@blackglory/types" "^0.6.5"
+    "@blackglory/prelude" "^0.1.0"
+    extra-promise "^1.0.1"
     extra-semver "^0.1.0"
     hotypes "^0.4.3"
-    nanoid "^3.2.0"
+    nanoid "^3.3.1"
     object-path-operator "^5.0.0"
+    return-style "^1.0.0"
 
 detect-indent@^6.0.0:
   version "6.0.0"
@@ -2821,15 +2822,34 @@ extra-promise@^1.0.0:
     reflect-metadata "^0.1.13"
     return-style "^0.12.6"
 
+extra-promise@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/extra-promise/-/extra-promise-1.0.1.tgz#25e2616b44e452aed2ca5ff33f8d814c5a302976"
+  integrity sha512-d610NiLykEdiXCjev1JfCJ4ItlL7XgWX3e2Nlgcl4/9TsF0BelEC1RxpRm8yM7Qdct82exoe1HTT5qqDmD4sug==
+  dependencies:
+    "@blackglory/errors" "^2.2.0"
+    "@blackglory/go" "^1.0.0"
+    "@blackglory/pass" "^1.0.0"
+    "@blackglory/structures" "^0.3.4"
+    "@blackglory/types" "^1.0.0"
+    eventemitter3 "^4.0.7"
+    extra-generator "^0.2.15"
+    iterable-operator "^1.0.0"
+    justypes "^2.0.0"
+    lodash.frompairs "^4.0.1"
+    lodash.once "^4.1.1"
+    reflect-metadata "^0.1.13"
+    return-style "^1.0.0"
+
 extra-rand@^0.1.1:
   version "0.1.1"
   resolved "https://registry.yarnpkg.com/extra-rand/-/extra-rand-0.1.1.tgz#e75e71ec96eb2f9b47d2a3c6513b3fb042f05a45"
   integrity sha512-sDpJWzuKa1bTrVVG3dkCiNMt93NanphQIWhW4tUS9PDiA0KTZ+fzyS4Idw+7/lH5ZzxtOiHEJEnBWSN4gi8gyA==
 
-extra-request@^6.0.0:
-  version "6.0.0"
-  resolved "https://registry.yarnpkg.com/extra-request/-/extra-request-6.0.0.tgz#797e036cd35fff40fbf0d25e38657126e93c68dd"
-  integrity sha512-+iQIP11er7iFA7aQNc2mtlGySW8p33MsfJptLoj1FJJLfH9mesbIn9Dfa8ZOezbc9wKQ0n7TornqJtnahpVQAA==
+extra-request@^6.0.1:
+  version "6.0.1"
+  resolved "https://registry.yarnpkg.com/extra-request/-/extra-request-6.0.1.tgz#0c67ec97593f8105631d87308b9cf0b9f63c2516"
+  integrity sha512-dP8BO8C5zD3avyYCyomA+hMc72CVAq2s+HUM8bGQ2xYvW0d0d3kRBkaa15mVeKoJF11ed8PHw9EVUOObUS9Ldg==
   dependencies:
     "@blackglory/errors" "^2.2.0"
     "@blackglory/types" "^1.0.0"
@@ -4606,10 +4626,10 @@ ms@2.1.2:
   resolved "https://registry.yarnpkg.com/ms/-/ms-2.1.2.tgz#d09d1f357b443f493382a8eb3ccd183872ae6009"
   integrity sha512-sGkPx+VjMtmA6MX27oA4FBFELFCZZ4S4XqeGOXCv68tT+jb3vk/RyaKWP0PTKyWtmLSM0b+adUTEvbs1PEaH2w==
 
-nanoid@^3.2.0:
-  version "3.2.0"
-  resolved "https://registry.yarnpkg.com/nanoid/-/nanoid-3.2.0.tgz#62667522da6673971cca916a6d3eff3f415ff80c"
-  integrity sha512-fmsZYa9lpn69Ad5eDn7FMcnnSR+8R34W9qJEijxYhTbfOWzr22n1QxCMzXLK+ODyW2973V3Fux959iQoUxzUIA==
+nanoid@^3.3.1:
+  version "3.3.1"
+  resolved "https://registry.yarnpkg.com/nanoid/-/nanoid-3.3.1.tgz#6347a18cac88af88f58af0b3594b723d5e99bb35"
+  integrity sha512-n6Vs/3KGyxPQd6uO0eH4Bv0ojGSUvuLlIHtC3Y0kEO23YRge8H9x1GCzLn28YX0H66pMkxuaeESFq4tKISKwdw==
 
 natural-compare@^1.4.0:
   version "1.4.0"
@@ -5357,6 +5377,13 @@ return-style@^0.12.6:
   dependencies:
     "@blackglory/go" "^0.1.1"
     "@blackglory/pass" "^0.1.0"
+
+return-style@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/return-style/-/return-style-1.0.0.tgz#ea0866c0b26437df478f87cb62338c87b5db2ebb"
+  integrity sha512-Z6t837vg5m8raWyUlioQ5SY7wrbx2hXuzSVnb4zcf5D6fY7lmH6zTyLeuknWtyONWGnCDyTSfJrwpgjFtWrMOQ==
+  dependencies:
+    "@blackglory/prelude" "^0.1.0"
 
 reusify@^1.0.4:
   version "1.0.4"
