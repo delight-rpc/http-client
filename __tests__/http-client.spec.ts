@@ -6,13 +6,13 @@ import '@blackglory/jest-matchers'
 beforeAll(() => startService(buildServer))
 afterAll(stopService)
 
-interface API {
+interface IAPI {
   echo(message: string): string
 }
 
 describe('createClient', () => {
   test('echo', async () => {
-    const client = createClient<API>({ server: getAddress() })
+    const client = createClient<IAPI>({ server: getAddress() })
 
     const result = client.echo('hello')
     const proResult = await result
