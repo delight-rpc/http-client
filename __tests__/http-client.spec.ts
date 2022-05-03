@@ -17,6 +17,7 @@ describe('createClient', () => {
     const result = client.echo('hello')
     const proResult = await result
 
+    // @ts-ignore
     expect(result).toBePromise()
     expect(proResult).toStrictEqual('hello')
   })
