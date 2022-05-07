@@ -45,16 +45,19 @@ interface IClientOptions {
 ### createClient
 ```ts
 function createClient<IAPI extends object>(
-  options: IClientOptions
-, parameterValidators?: DelightRPC.ParameterValidators<IAPI>
-, expectedVersion?: `${number}.${number}.${number}`
+  clientOptions: IClientOptions
+, options?: {
+    parameterValidators?: DelightRPC.ParameterValidators<IAPI>
+    expectedVersion?: `${number}.${number}.${number}`
+  }
 ): DelightRPC.ClientProxy<IAPI>
 ```
 
 ### createBatchClient
 ```ts
-function createBatchClient(
-  options: IClientOptions
-, expectedVersion?: `${number}.${number}.${number}`
+export function createBatchClient(
+  clientOptions: IClientOptions
+, options?: {
+    expectedVersion?: `${number}.${number}.${number}`
+  }
 ): DelightRPC.BatchClient
-```

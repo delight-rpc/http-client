@@ -12,7 +12,9 @@ interface IAPI {
 
 describe('createClient', () => {
   test('echo', async () => {
-    const client = createClient<IAPI>({ server: getAddress() })
+    const client = createClient<IAPI>({
+      server: getAddress()
+    })
 
     const result = client.echo('hello')
     const proResult = await result

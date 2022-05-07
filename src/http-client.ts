@@ -1,4 +1,5 @@
 import * as DelightRPC from 'delight-rpc'
+import { IRequest, IBatchRequest } from '@delight-rpc/protocol'
 import { fetch } from 'extra-fetch'
 import { post } from 'extra-request'
 import { ok, toJSON } from 'extra-response'
@@ -19,26 +20,34 @@ export interface IClientOptions {
 }
 
 export function createClient<IAPI extends object>(
-  options: IClientOptions
-, parameterValidators?: DelightRPC.ParameterValidators<IAPI>
-, expectedVersion?: `${number}.${number}.${number}`
+  clientOptions: IClientOptions
+, { parameterValidators, expectedVersion }: {
+    parameterValidators?: DelightRPC.ParameterValidators<IAPI>
+    expectedVersion?: `${number}.${number}.${number}`
+  } = {}
 ): DelightRPC.ClientProxy<IAPI> {
   const client = DelightRPC.createClient<IAPI, Json>(
-    createSend(options)
-  , parameterValidators
-  , expectedVersion
+    createSend(clientOptions)
+  , {
+      parameterValidators
+    , expectedVersion
+    }
   )
 
   return client
 }
 
 export function createBatchClient(
-  options: IClientOptions
-, expectedVersion?: `${number}.${number}.${number}`
+  clientOptions: IClientOptions
+, { expectedVersion }: {
+    expectedVersion?: `${number}.${number}.${number}`
+  } = {}
 ): DelightRPC.BatchClient {
   const client = new DelightRPC.BatchClient<Json>(
-    createSend(options)
-  , expectedVersion
+    createSend(clientOptions)
+  , {
+      expectedVersion
+    }
   )
 
   return client
@@ -49,7 +58,7 @@ function createSend<T>(options: IClientOptions) {
    * @throws {AbortError}
    * @throws {HTTPError}
    */
-  return async function (request: DelightRPC.IRequest<Json> | DelightRPC.IBatchRequest<Json>) {
+  return async function (request: IRequest<Json> | IBatchRequest<Json>) {
     const auth = options.basicAuth
 
     const req = post(
