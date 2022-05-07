@@ -1,4 +1,4 @@
-import fastify from 'fastify'
+import { fastify } from 'fastify'
 import { createResponse } from 'delight-rpc'
 
 const API = {

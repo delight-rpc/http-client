@@ -13,23 +13,8 @@ npm install --save @delight-rpc/http-client
 yarn add @delight-rpc/http-client
 ```
 
-## Usage
-```ts
-// api.d.ts
-interface IAPI {
-  echo(message: string): string
-}
-
-// client.ts
-const client = createClient<IAPI>({
-  server: 'http://localhost:8080'
-, keepalive: true
-})
-
-await client.echo('hello')
-```
-
 ## API
+### HTTPClientAdapter
 ```ts
 interface IClientOptions {
   server: string
@@ -40,21 +25,15 @@ interface IClientOptions {
     password: string
   }
 }
-```
 
-### createClient
-```ts
-function createClient<IAPI extends object>(
-  options: IClientOptions
-, parameterValidators?: DelightRPC.ParameterValidators<IAPI>
-, expectedVersion?: `${number}.${number}.${number}`
-): DelightRPC.ClientProxy<IAPI>
-```
+class HTTPClientAdapter implements DelightRPC.IClientAdapter<Json> {
+  constructor(private options: IClientOptions)
 
-### createBatchClient
-```ts
-function createBatchClient(
-  options: IClientOptions
-, expectedVersion?: `${number}.${number}.${number}`
-): DelightRPC.BatchClient
+  /**
+   * @throws {AbortError}
+   * @throws {HTTPError}
+   */
+  async send(request: IRequest<Json> | IBatchRequest<Json>): Promise<void>
+  listen(listener: (response: IResponse<Json> | IBatchResponse<Json>) => void): () => void
+}
 ```

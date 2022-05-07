@@ -1,7 +1,7 @@
 import { buildServer } from './http-client.mock'
-import { createClient } from '@src/http-client'
+import { HTTPClientAdapter } from '@src/http-client'
+import { createClient } from 'delight-rpc'
 import { startService, stopService, getAddress } from './utils'
-import '@blackglory/jest-matchers'
 
 beforeAll(() => startService(buildServer))
 afterAll(stopService)
@@ -12,13 +12,11 @@ interface IAPI {
 
 describe('createClient', () => {
   test('echo', async () => {
-    const client = createClient<IAPI>({ server: getAddress() })
+    const adapter = new HTTPClientAdapter({ server: getAddress() })
+    const [client] = createClient<IAPI>(adapter)
 
-    const result = client.echo('hello')
-    const proResult = await result
+    const result = await client.echo('hello')
 
-    // @ts-ignore
-    expect(result).toBePromise()
-    expect(proResult).toStrictEqual('hello')
+    expect(result).toStrictEqual('hello')
   })
 })
