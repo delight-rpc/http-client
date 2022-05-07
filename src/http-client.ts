@@ -1,5 +1,4 @@
 import * as DelightRPC from 'delight-rpc'
-import { IRequest, IBatchRequest, IResponse, IBatchResponse } from '@delight-rpc/protocol'
 import { fetch } from 'extra-fetch'
 import { post } from 'extra-request'
 import { ok, toJSON } from 'extra-response'
@@ -19,34 +18,50 @@ export interface IClientOptions {
   }
 }
 
-export class HTTPClientAdapter implements DelightRPC.IClientAdapter<Json> {
-  private listeners = new Set<(response: IResponse<Json> | IBatchResponse<Json>) => void>()
+export function createClient<IAPI extends object>(
+  options: IClientOptions
+, parameterValidators?: DelightRPC.ParameterValidators<IAPI>
+, expectedVersion?: `${number}.${number}.${number}`
+): DelightRPC.ClientProxy<IAPI> {
+  const client = DelightRPC.createClient<IAPI, Json>(
+    createSend(options)
+  , parameterValidators
+  , expectedVersion
+  )
 
-  constructor(private options: IClientOptions) {}
+  return client
+}
 
+export function createBatchClient(
+  options: IClientOptions
+, expectedVersion?: `${number}.${number}.${number}`
+): DelightRPC.BatchClient {
+  const client = new DelightRPC.BatchClient<Json>(
+    createSend(options)
+  , expectedVersion
+  )
+
+  return client
+}
+
+function createSend<T>(options: IClientOptions) {
   /**
    * @throws {AbortError}
    * @throws {HTTPError}
    */
-  async send(request: IRequest<Json> | IBatchRequest<Json>): Promise<void> {
-    const auth = this.options.basicAuth
+  return async function (request: DelightRPC.IRequest<Json> | DelightRPC.IBatchRequest<Json>) {
+    const auth = options.basicAuth
 
     const req = post(
-      url(this.options.server)
+      url(options.server)
     , auth && basicAuth(auth.username, auth.password)
     , json(request)
-    , this.options.timeout && signal(timeoutSignal(this.options.timeout))
-    , keepalive(this.options.keepalive)
+    , options.timeout && signal(timeoutSignal(options.timeout))
+    , keepalive(options.keepalive)
     )
 
-    const response = await fetch(req)
+    return await fetch(req)
       .then(ok)
-      .then(toJSON) as IResponse<Json> | IBatchResponse<Json>
-    this.listeners.forEach(listener => listener(response))
-  }
-
-  listen(listener: (response: IResponse<Json> | IBatchResponse<Json>) => void): () => void {
-    this.listeners.add(listener)
-    return () => this.listeners.clear()
+      .then(toJSON) as T
   }
 }
