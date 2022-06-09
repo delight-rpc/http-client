@@ -12,7 +12,7 @@ export default {
     }
   }
 , testEnvironment: 'node'
-, resolver: '@blackglory/jest-node-exports-resolver'
+, resolver: '@blackglory/jest-resolver'
 , testMatch: ['**/__tests__/**/?(*.)+(spec|test).[jt]s?(x)']
 , moduleNameMapper: pathsToModuleNameMapper(compilerOptions.paths, {
     prefix: '<rootDir>/'
