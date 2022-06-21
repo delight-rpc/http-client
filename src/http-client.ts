@@ -21,9 +21,10 @@ export interface IClientOptions {
 
 export function createClient<IAPI extends object>(
   clientOptions: IClientOptions
-, { parameterValidators, expectedVersion }: {
+, { parameterValidators, expectedVersion, channel }: {
     parameterValidators?: DelightRPC.ParameterValidators<IAPI>
     expectedVersion?: `${number}.${number}.${number}`
+    channel?: string
   } = {}
 ): DelightRPC.ClientProxy<IAPI> {
   const client = DelightRPC.createClient<IAPI, Json>(
@@ -31,6 +32,7 @@ export function createClient<IAPI extends object>(
   , {
       parameterValidators
     , expectedVersion
+    , channel
     }
   )
 
@@ -39,14 +41,16 @@ export function createClient<IAPI extends object>(
 
 export function createBatchClient(
   clientOptions: IClientOptions
-, { expectedVersion }: {
+, { expectedVersion, channel }: {
     expectedVersion?: `${number}.${number}.${number}`
+    channel?: string
   } = {}
 ): DelightRPC.BatchClient {
   const client = new DelightRPC.BatchClient<Json>(
     createSend(clientOptions)
   , {
       expectedVersion
+    , channel
     }
   )
 
