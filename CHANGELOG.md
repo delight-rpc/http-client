@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [7.1.0](https://github.com/delight-rpc/http-client/compare/v7.0.0...v7.1.0) (2022-06-21)
+
+
+### Features
+
+* add channel support ([6abbbf2](https://github.com/delight-rpc/http-client/commit/6abbbf29f3fdd49e9207cab15547775d405cbbf3))
+
 ## [7.0.0](https://github.com/delight-rpc/http-client/compare/v6.0.0...v7.0.0) (2022-05-07)
 
 
