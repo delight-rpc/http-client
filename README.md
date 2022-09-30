@@ -15,12 +15,10 @@ yarn add @delight-rpc/http-client
 
 ## Usage
 ```ts
-// api.d.ts
 interface IAPI {
   echo(message: string): string
 }
 
-// client.ts
 const client = createClient<IAPI>({
   server: 'http://localhost:8080'
 , keepalive: true
@@ -56,7 +54,7 @@ function createClient<IAPI extends object>(
 
 ### createBatchClient
 ```ts
-export function createBatchClient(
+function createBatchClient(
   clientOptions: IClientOptions
 , options?: {
     expectedVersion?: `${number}.${number}.${number}`
