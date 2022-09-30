@@ -70,7 +70,7 @@ function createSend<T>(options: IClientOptions) {
     , auth && basicAuth(auth.username, auth.password)
     , json(request)
     , options.timeout && signal(timeoutSignal(options.timeout))
-    , keepalive(options.keepalive)
+    , keepalive(options.keepalive ?? false)
     )
 
     return await fetch(req)
