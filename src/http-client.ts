@@ -7,8 +7,6 @@ import { json, url, signal, keepalive, basicAuth } from 'extra-request/transform
 import { Json } from 'justypes'
 import { timeoutSignal } from 'extra-abort'
 
-export { HTTPError } from 'extra-response'
-
 export interface IClientOptions {
   server: string
   timeout?: number

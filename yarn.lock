@@ -323,7 +323,7 @@
     extra-timers "^0.2.5"
     justypes "^2.0.0"
 
-"@blackglory/http-status@^1.0.1":
+"@blackglory/http-status@^1.0.2":
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/@blackglory/http-status/-/http-status-1.0.2.tgz#29edda1748252988f6e2b6ef32a436168012e74d"
   integrity sha512-H8BUIcOyaPPjHafM3PcTYU/W/Gar+7AcDnJKJkFFcmGwWpmvxLR6ivhAm9wBuaOhh9ZDtg21zIbfzCDyVPvosg==
