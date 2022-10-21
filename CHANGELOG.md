@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [7.2.0](https://github.com/delight-rpc/http-client/compare/v7.1.3...v7.2.0) (2022-10-21)
+
+
+### Features
+
+* export HTTPStatus ([39f0c2e](https://github.com/delight-rpc/http-client/commit/39f0c2e266cf79c8bfc8ebf27d7f697767155d8f))
+
 ### [7.1.3](https://github.com/delight-rpc/http-client/compare/v7.1.2...v7.1.3) (2022-10-20)
 
 ### [7.1.2](https://github.com/delight-rpc/http-client/compare/v7.1.1...v7.1.2) (2022-09-30)
