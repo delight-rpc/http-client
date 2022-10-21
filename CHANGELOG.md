@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [8.0.0](https://github.com/delight-rpc/http-client/compare/v7.2.3...v8.0.0) (2022-10-21)
+
+
+### ⚠ BREAKING CHANGES
+
+* Removed `HTTPStatus`
+
+* replace `HTTPStatus` with peer dependencies ([4c4d401](https://github.com/delight-rpc/http-client/commit/4c4d401e1939a0db1a7d1d2ca6a96995919ea586))
+
 ### [7.2.3](https://github.com/delight-rpc/http-client/compare/v7.2.2...v7.2.3) (2022-10-21)
 
 ### [7.2.2](https://github.com/delight-rpc/http-client/compare/v7.2.1...v7.2.2) (2022-10-21)
