@@ -34,7 +34,6 @@
     }
   },
   "devDependencies": {
-    "@blackglory/http-status": "^1.0.2",
     "@blackglory/jest-matchers": "^0.4.1",
     "@blackglory/jest-resolver": "^0.2.1",
     "@commitlint/cli": "^17.0.2",
@@ -59,6 +58,7 @@
     "typescript-transform-paths": "^3.3.1"
   },
   "dependencies": {
+    "@blackglory/http-status": "^1.0.3",
     "extra-abort": "^0.1.2",
     "extra-fetch": "^4.0.0",
     "extra-request": "^8.0.1",
@@ -66,7 +66,6 @@
     "justypes": "^3.0.0"
   },
   "peerDependencies": {
-    "@blackglory/http-status": "^1.0.2",
     "delight-rpc": "^4.0.0"
   }
 }
