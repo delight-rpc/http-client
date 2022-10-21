@@ -5,7 +5,6 @@ it needs to be used with the server implementation [@delight-rpc/http-server].
 [delight-rpc]: https://www.npmjs.com/package/delight-rpc
 [@delight-rpc/http-server]: https://www.npmjs.com/package/@delight-rpc/http-server
 
-
 ## Install
 ```sh
 npm install --save @delight-rpc/http-client
@@ -15,6 +14,8 @@ yarn add @delight-rpc/http-client
 
 ## Usage
 ```ts
+import { createClient } from '@delight-rpc/http-client'
+
 interface IAPI {
   echo(message: string): string
 }
