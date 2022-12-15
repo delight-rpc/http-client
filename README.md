@@ -46,7 +46,7 @@ function createClient<IAPI extends object>(
   clientOptions: IClientOptions
 , options?: {
     parameterValidators?: DelightRPC.ParameterValidators<IAPI>
-    expectedVersion?: `${number}.${number}.${number}`
+    expectedVersion?: string
     channel?: string
   }
 ): DelightRPC.ClientProxy<IAPI>
@@ -57,7 +57,7 @@ function createClient<IAPI extends object>(
 function createBatchClient(
   clientOptions: IClientOptions
 , options?: {
-    expectedVersion?: `${number}.${number}.${number}`
+    expectedVersion?: string
     channel?: string
   }
 ): DelightRPC.BatchClient
