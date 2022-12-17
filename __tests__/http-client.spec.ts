@@ -1,7 +1,6 @@
 import { buildServer } from './http-client.mock'
 import { createClient } from '@src/http-client'
 import { startService, stopService, getAddress } from './utils'
-import '@blackglory/jest-matchers'
 
 beforeAll(() => startService(buildServer))
 afterAll(stopService)
@@ -16,11 +15,8 @@ describe('createClient', () => {
       server: getAddress()
     })
 
-    const result = client.echo('hello')
-    const proResult = await result
+    const result = await client.echo('hello')
 
-    // @ts-ignore
-    expect(result).toBePromise()
-    expect(proResult).toStrictEqual('hello')
+    expect(result).toStrictEqual('hello')
   })
 })

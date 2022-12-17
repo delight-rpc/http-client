@@ -34,7 +34,6 @@
     }
   },
   "devDependencies": {
-    "@blackglory/jest-matchers": "^0.5.0",
     "@blackglory/jest-resolver": "^0.3.0",
     "@commitlint/cli": "^17.3.0",
     "@commitlint/config-conventional": "^17.3.0",
@@ -44,6 +43,7 @@
     "cross-env": "^7.0.3",
     "delight-rpc": "^5.0.0",
     "eslint": "^8.29.0",
+    "extra-filesystem": "^0.4.8",
     "fastify": "^3.29.0",
     "husky": "4",
     "jest": "^29.3.1",
