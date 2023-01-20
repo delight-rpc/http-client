@@ -8,7 +8,9 @@ const API = {
 }
 
 export function buildServer() {
-  const server = fastify()
+  const server = fastify({
+    forceCloseConnections: true
+  })
 
   server.post('/', async (req, reply) => {
     const result = await createResponse(API, req.body as any)

@@ -5,7 +5,7 @@ let address: string
 
 export async function startService(buildServer: () => FastifyInstance) {
   server = buildServer()
-  address = await server.listen(0)
+  address = await server.listen()
 }
 
 export async function stopService() {

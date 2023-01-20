@@ -4,7 +4,7 @@ import { fetch } from 'extra-fetch'
 import { post } from 'extra-request'
 import { ok, toJSON } from 'extra-response'
 import { json, url, signal, keepalive, basicAuth } from 'extra-request/transformers'
-import { Json } from 'justypes'
+import { JSONValue } from 'justypes'
 import { timeoutSignal } from 'extra-abort'
 
 export interface IClientOptions {
@@ -25,7 +25,7 @@ export function createClient<IAPI extends object>(
     channel?: string
   } = {}
 ): DelightRPC.ClientProxy<IAPI> {
-  const client = DelightRPC.createClient<IAPI, Json>(
+  const client = DelightRPC.createClient<IAPI, JSONValue>(
     createSend(clientOptions)
   , {
       parameterValidators
@@ -44,7 +44,7 @@ export function createBatchClient(
     channel?: string
   } = {}
 ): DelightRPC.BatchClient {
-  const client = new DelightRPC.BatchClient<Json>(
+  const client = new DelightRPC.BatchClient<JSONValue>(
     createSend(clientOptions)
   , {
       expectedVersion
@@ -60,7 +60,7 @@ function createSend<T>(options: IClientOptions) {
    * @throws {AbortError}
    * @throws {HTTPError}
    */
-  return async function (request: IRequest<Json> | IBatchRequest<Json>) {
+  return async function (request: IRequest<JSONValue> | IBatchRequest<JSONValue>) {
     const auth = options.basicAuth
 
     const req = post(
