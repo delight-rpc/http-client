@@ -3,24 +3,24 @@
   "version": "9.0.2",
   "description": "",
   "keywords": [],
-  "type": "module",
   "files": [
     "lib"
   ],
+  "type": "module",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
   "engines": {
     "node": ">=16"
   },
-  "main": "lib/index.js",
-  "types": "lib/index.d.ts",
+  "sideEffects": false,
   "repository": "git@github.com:delight-rpc/http-client.git",
   "author": "BlackGlory <woshenmedoubuzhidao@blackglory.me>",
   "license": "MIT",
-  "sideEffects": false,
   "scripts": {
     "prepare": "ts-patch install -s",
-    "lint": "eslint --ext .js,.jsx,.ts,.tsx --quiet src",
+    "lint": "eslint --ext .js,.jsx,.ts,.tsx --quiet src __tests__",
     "test": "cross-env NODE_OPTIONS=--experimental-vm-modules jest --no-cache --config jest.config.js",
-    "test:debug": "cross-env NODE_OPTIONS=--experimental-vm-modules node --inspect-brk node_modules/.bin/jest --runInBand",
+    "test:debug": "cross-env NODE_OPTIONS=--experimental-vm-modules node --inspect-brk node_modules/.bin/jest --runInBand --config jest.config.js",
     "test:coverage": "cross-env NODE_OPTIONS=--experimental-vm-modules jest --coverage --config jest.config.js",
     "prepublishOnly": "run-s prepare clean build",
     "clean": "rimraf lib",
