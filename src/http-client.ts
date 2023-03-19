@@ -66,7 +66,7 @@ function createSend<T>(options: IClientOptions) {
     const req = post(
       url(options.server)
     , auth && basicAuth(auth.username, auth.password)
-    , json(request)
+    , json(request as JSONValue)
     , options.timeout && signal(timeoutSignal(options.timeout))
     , options.keepalive && keepalive()
     )

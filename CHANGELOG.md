@@ -10,6 +10,7 @@ All notable changes to this project will be documented in this file. See [standa
 ### ⚠ BREAKING CHANGES
 
 * It requires delight-rpc@^5.0.0
+* CommonJS => ESM
 
 * upgrade dependencies ([5ce80db](https://github.com/delight-rpc/http-client/commit/5ce80db5391b6cb338a07f0c61ef52086093185c))
 
