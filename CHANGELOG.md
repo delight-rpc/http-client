@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [9.0.5](https://github.com/delight-rpc/http-client/compare/v9.0.4...v9.0.5) (2023-06-11)
+
+
+### Bug Fixes
+
+* export src ([7e1923e](https://github.com/delight-rpc/http-client/commit/7e1923efb7881920b0961f90334e5a5fb21e400d))
+
 ### [9.0.4](https://github.com/delight-rpc/http-client/compare/v9.0.3...v9.0.4) (2023-04-12)
 
 ### [9.0.3](https://github.com/delight-rpc/http-client/compare/v9.0.2...v9.0.3) (2023-03-19)
