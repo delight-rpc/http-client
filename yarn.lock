@@ -4622,6 +4622,13 @@ return-style@^3.0.0:
   dependencies:
     "@blackglory/prelude" "^0.3.1"
 
+return-style@^3.0.1:
+  version "3.0.1"
+  resolved "https://registry.yarnpkg.com/return-style/-/return-style-3.0.1.tgz#603c26f78220e2966c553952438c363b0c0ed805"
+  integrity sha512-PzP0aIcomRkdzrw+MGwHI4O+aCDpOgPBOUjGfr6fWi6vl2tu6/fC6egI6h+y7Tq54Aw8t3nza8jTDj2s6UNYOA==
+  dependencies:
+    "@blackglory/prelude" "^0.3.1"
+
 reusify@^1.0.4:
   version "1.0.4"
   resolved "https://registry.yarnpkg.com/reusify/-/reusify-1.0.4.tgz#90da382b1e126efc02146e90845a88db12925d76"
