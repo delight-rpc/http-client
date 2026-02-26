@@ -51,7 +51,7 @@ export function createClient<IAPI extends object>(
 
       async function sendAbort(): Promise<void> {
         const abort = DelightRPC.createAbort(request.id, channel)
-        await sendMessage(abort, clientOptions, controller.signal).catch(pass)
+        await sendMessage(abort, clientOptions).catch(pass)
       }
     }
   , {
@@ -102,7 +102,7 @@ export function createBatchClient(
 
       async function sendAbort(): Promise<void> {
         const abort = DelightRPC.createAbort(request.id, channel)
-        await sendMessage(abort, clientOptions, controller.signal)
+        await sendMessage(abort, clientOptions).catch(pass)
       }
     }
   , {
@@ -125,22 +125,22 @@ export function createBatchClient(
 async function sendMessage(
   message: IRequest<JSONValue>
 , options: IClientOptions
-, signal: AbortSignal
+, signal?: AbortSignal
 ): Promise<IResponse<JSONValue>>
 async function sendMessage(
   message: IAbort
 , options: IClientOptions
-, signal: AbortSignal
+, signal?: AbortSignal
 ): Promise<void>
 async function sendMessage(
   message: IBatchRequest<JSONValue> | IAbort
 , options: IClientOptions
-, signal: AbortSignal
+, signal?: AbortSignal
 ): Promise<IBatchResponse<JSONValue>>
 async function sendMessage(
   message: IRequest<JSONValue> | IAbort | IBatchRequest<JSONValue>
 , options: IClientOptions
-, signal: AbortSignal
+, signal?: AbortSignal
 ): Promise<IResponse<JSONValue> | IBatchResponse<JSONValue> | void> {
   const auth = options.basicAuth
 
