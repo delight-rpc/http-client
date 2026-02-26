@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [10.1.0](https://github.com/delight-rpc/http-client/compare/v10.0.0...v10.1.0) (2026-02-26)
+
+
+### Features
+
+* improve the abort sender ([ccd296c](https://github.com/delight-rpc/http-client/commit/ccd296c3cd8fe8d612915aff3ea5943400a867b4))
+
 ## [10.0.0](https://github.com/delight-rpc/http-client/compare/v9.0.5...v10.0.0) (2026-02-26)
 
 
