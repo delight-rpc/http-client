@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [10.0.0](https://github.com/delight-rpc/http-client/compare/v9.0.5...v10.0.0) (2026-02-26)
+
+
+### ⚠ BREAKING CHANGES
+
+* - Node.js v16 => Node.js v22
+- Modified the return value of `createClient()`
+- Modified the return value of `createBatchClient()`
+
+### Features
+
+* add support for `DelightRPC.IAbort` and delight-rpc@^7.0.0 ([0d09dcb](https://github.com/delight-rpc/http-client/commit/0d09dcba9b24cf8a5d2a263ca2251eba3c948cf8))
+
 ### [9.0.5](https://github.com/delight-rpc/http-client/compare/v9.0.4...v9.0.5) (2023-06-11)
 
 
