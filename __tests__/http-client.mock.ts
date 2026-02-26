@@ -41,7 +41,7 @@ export function buildServer() {
         .send(res)
     } else if (DelightRPC.isAbort(message)) {
       return reply
-        .status(201)
+        .status(204)
         .send()
     } else {
       return reply
