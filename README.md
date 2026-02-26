@@ -19,7 +19,7 @@ interface IAPI {
   echo(message: string): string
 }
 
-const client = createClient<IAPI>({
+const [client] = createClient<IAPI>({
   server: 'http://localhost:8080'
 , keepalive: true
 })
@@ -49,7 +49,7 @@ function createClient<IAPI extends object>(
     expectedVersion?: string
     channel?: string
   }
-): DelightRPC.ClientProxy<IAPI>
+): [client: DelightRPC.ClientProxy<IAPI>, close: () => void]
 ```
 
 ### createBatchClient
@@ -60,4 +60,4 @@ function createBatchClient(
     expectedVersion?: string
     channel?: string
   }
-): DelightRPC.BatchClient
+): [client: DelightRPC.BatchClient, close: () => void]
